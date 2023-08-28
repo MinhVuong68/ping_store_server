@@ -17,9 +17,8 @@ public class Brand {
     @Column(name = "brand_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "brand_name", columnDefinition = "nvarchar(50)", nullable = false)
+    @Column(name = "brand_name", columnDefinition = "nvarchar(50)", nullable = false,unique = true)
     private String name;
     @OneToMany(mappedBy = "brand")
     private List<Product> products;
-
 }
