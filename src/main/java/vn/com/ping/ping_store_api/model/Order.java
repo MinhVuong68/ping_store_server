@@ -28,10 +28,9 @@ public class Order {
     @Column(nullable = false)
     private LocalDate requiredDate;
     @JsonFormat(pattern = "dd/MM/yyyy")
-    @Column(nullable = false)
     private LocalDate shippedDate;
     @ManyToOne
-    @JoinColumn(name = "staff_id")
+    @JoinColumn(name = "staff_id", nullable = false)
     private Staff staff;
     @ManyToOne
     @JoinColumn(name = "customer_id")

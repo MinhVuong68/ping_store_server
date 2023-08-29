@@ -27,10 +27,10 @@ public class Customer {
     private String email;
     @Embedded
     @AttributeOverrides({
-            @AttributeOverride(name = "street", column = @Column(columnDefinition = "nvarchar(50)", nullable = false)),
-            @AttributeOverride(name = "city", column = @Column(columnDefinition = "nvarchar(50)", nullable = false)),
-            @AttributeOverride(name = "state", column = @Column(columnDefinition = "nvarchar(50)", nullable = false)),
-            @AttributeOverride(name = "zipCode", column = @Column(name = "zip_code", columnDefinition = "varchar(6)", nullable = false)),
+            @AttributeOverride(name = "street", column = @Column(columnDefinition = "nvarchar(50)")),
+            @AttributeOverride(name = "city", column = @Column(columnDefinition = "nvarchar(50)")),
+            @AttributeOverride(name = "state", column = @Column(columnDefinition = "nvarchar(50)")),
+            @AttributeOverride(name = "zipCode", column = @Column(name = "zip_code", columnDefinition = "varchar(6)")),
     })
     private Address address;
     @OneToMany(mappedBy = "customer")
